@@ -1,0 +1,33 @@
+-- Create a Juice Market store database
+
+CREATE TABLE juicemarket (id integer primary key, name text, quantity integer, taste text, price integer);
+INSERT INTO juicemarket VALUES(1, "apple", 9, "sweet", 2.5);
+INSERT INTO juicemarket VALUES(2, "grapefruit", 15, "bitter", 4);
+INSERT INTO juicemarket VALUES(3, "lemonade", 5, "tart", 3);
+INSERT INTO juicemarket VALUES(4, "orange", 8, "tart", 4);
+INSERT INTO juicemarket VALUES(5, "cherry", 17, "tart", 5);
+INSERT INTO juicemarket VALUES(6, "pomegranate", 14, "sweet", 4.5);
+INSERT INTO juicemarket VALUES(7, "watermelon", 18, "sweet", 3.5);
+INSERT INTO juicemarket VALUES(8, "grape", 10, "sweet", 6);
+INSERT INTO juicemarket VALUES(9, "mango", 20, "sweet", 5);
+INSERT INTO juicemarket VALUES(10, "peach", 21, "sweet", 4);
+INSERT INTO juicemarket VALUES(11, "limeade",14, "tart", 3);
+INSERT INTO juicemarket VALUES(12, "kiwi", 11, "tart", 5);
+INSERT INTO juicemarket VALUES(13, "starfruit", 12, "tart", 7);
+INSERT INTO juicemarket VALUES(14, "aloe vera", 10, "sweet", 6);
+INSERT INTO juicemarket VALUES(15, "soursop", 10, "sweet", 7);
+
+--Display the databse ordered by price
+SELECT * 
+FROM juicemarket
+ORDER BY price;
+
+-- What is the maximum quantity available?
+SELECT MAX(quantity)
+FROM juicemarket;
+
+--What are the least expensive juices?
+SELECT*
+FROM juicemarket
+WHERE price <4
+order by price
